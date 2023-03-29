@@ -98,7 +98,7 @@ function trigger_airport() {
 }
 
 function wait_trigger_success() {
-    for i in `seq 1 5`
+    for i in `seq 1 30`
     do
         cd $workdir
         run_command git pull
