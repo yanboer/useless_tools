@@ -42,7 +42,7 @@ do
             echo " "
             echo "TODO:"
             echo "  set 'StrictHostKeyChecking no' to /etc/ssh/ssh_config"
-            echo "  apt install sshpass"
+            echo "  apt install sshpass tofrodos"
             echo "  set github secret TOKEN and USER_PASS(settings->secret and variables->actions)"
             echo "  set browser SwitchyOmega on the port"
             exit 0
@@ -114,6 +114,7 @@ function wait_trigger_success() {
 
 function get_real_address() {
     cd $workdir
+    fromdos ./airport/address
     cat ./airport/address | head -n 2 | tail -n 1 | cut -d ':' -f 2
 }
 
